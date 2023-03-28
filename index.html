@@ -21,39 +21,247 @@ pagespeed.localStorageCacheInit();</script><link href="images/xfav.png%2Cqv1.pag
 <link rel="stylesheet" href="css/calc.css" type="text/css">
 <link rel="stylesheet" href="css/A.calcDoze.css%2Cqv1.pagespeed.cf.14fYreZokY.css" type="text/css">
 <link rel="stylesheet" href="css/matreshka.css"><script src="js/jquery.min.js"></script>
+  <style>
+    .webt-header {
+      box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+      overflow: hidden;
+    }
+    .header-wrapper {
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .top-line {
+      height: 40px;
+      background-color: #f4f4f4;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .top-line:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left:-50vw;
+      width: 150vw;
+      background-color: #f4f4f4;
+      height: 100%;
+    }
+    .top-line__nav {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+    .top-line__title {
+      color: #707070;
+      font-size: 14px;
+    }
+    .top-line__link {
+      color: #282828;
+      font-size: 14px;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    .top-line__link:hover,
+    .bottom-line__link:hover {
+      color: #e2635e;
+    }
+    .top-line__button {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #282828;
+      border: 1px solid #282828;
+      color: #fff;
+      width: 102px;
+      height: 22px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 10px;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    .top-line__button:hover {
+      background-color: #ffffff;
+      color: #282828;
+    }
+    .bottom-line {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .bottom-line__left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 32px;
+    }
+    .bottom-line__logo {
+      width: 115px;
+    }
+    .bottom-line__nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 26px;
+    }
+    .bottom-line__link {
+      color: #282828;
+      font-size: 18px;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    .bottom-line__right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 32px;
+      position: relative;
+    }
+    .bottom-line__right:before {
+      content: '';
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 1px;
+      height: 24px;
+      background-color: #d7d7d7;
+      display: block;
+      position: absolute;
+    }
+    .bottom-line__login {
+      width: 24px;
+      height: 24px;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    .bottom-line__login:hover,
+    .bottom-line__toggle:hover {
+      opacity: 0.6;
+    }
+    .bottom-line__toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    .bottom-line__toggle > span {
+      display: block;
+      height: 2px;
+      width: 20px;
+      background-color: #282828;
+    }
+
+    @media (max-width: 1280px) {
+      .webt-header {
+        padding: 0 12px;
+      }
+    }
+
+    @media (max-width: 983px) {
+      .bottom-line__nav {
+        display: none;
+      }
+      .top-line__nav {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 660px) {
+      .top-line__button {
+        display: none;
+      }
+      .top-line {
+        height: 24px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        overflow-x: auto;
+        padding: 0 12px;
+      }
+      .webt-header {
+        padding: 0;
+      }
+      .bottom-line {
+        padding: 0 12px;
+      }
+    }
+  </style>
 </head>
 <body>
 <script>function date(d){var now=new Date();now.setDate(now.getDate()+d+0);document.write(('0'+now.getDate()).slice(-2)+"."+('0'+(now.getMonth()+1)).slice(-2)+"."+now.getFullYear());}</script>
 <main class="theme-main">
-<header>
-<div class="wrap_header">
-<div class="logo"><a href="#goToForm"><img src="images/xlogo_big.png%2Cqv1.pagespeed.ic.SVcEsMBQoH.png" style="cursor: pointer;" alt></a></div>
-<div class="menu">
-<a href class="burger_btn"></a>
-<a href class="mini_logo"><img src="images/xlogo_girl.png%2Cqv1.pagespeed.ic.9C1tLwebac.png" alt></a>
-<ul>
-<li><a href="#goToForm">NOTICIAS</a></li>
-<li><a href="#goToForm">MODA</a></li>
-<li><a href="#goToForm">SALUD Y BELLEZA</a></li>
-<li><a href="#goToForm">ESTILO DE VIDA</a></li>
-<li><a href="#goToForm">EL Y ELLA</a></li>
-<li><a href="#goToForm">NIÑOS</a></li>
-<li><a href="#goToForm">CASA</a></li>
-</ul>
-<a href class="btn_search"><img src="images/xsearch_icon.png.pagespeed.ic.guZkTKhRcB.png" alt></a>
-</div>
-</div>
-<div class="subline">
-<ul>
-<li><a href="#goToForm">Astrología</a></li>
-<li><a href="#goToForm">Blogger del día</a></li>
-<li><a href="#goToForm">Pruebas</a></li>
-<li><a href="#goToForm">Películas</a></li>
-<li><a href="#goToForm">Oniromancia</a></li>
-<li><a href="#goToForm">Más</a></li>
-</ul>
-</div>
-</header>
+
+  <header class="webt-header">
+    <div class="header-wrapper top-line">
+      <nav class="top-line__nav">
+        <span class="top-line__title">Temas del día:</span>
+        <a href="#goToForm" class="top-line__link">Reina Letizia en Cádiz</a>
+        <a href="#goToForm" class="top-line__link">Camisetas</a>
+        <a href="#goToForm" class="top-line__link">Grey-blending</a>
+        <a href="#goToForm" class="top-line__link">Hiba Abouk ruptura</a>
+      </nav>
+      <a href="#goToForm" class="top-line__button">NEWSLETTER</a>
+    </div>
+    <div class="header-wrapper bottom-line">
+      <div class="bottom-line__left">
+        <img src="images/pics/logo.svg" alt="" class="bottom-line__logo">
+        <nav class="bottom-line__nav">
+          <a href="#goToForm" class="bottom-line__link">Moda</a>
+          <a href="#goToForm" class="bottom-line__link">Belleza</a>
+          <a href="#goToForm" class="bottom-line__link">Lifestyle</a>
+          <a href="#goToForm" class="bottom-line__link">Celebrities</a>
+          <a href="#goToForm" class="bottom-line__link">Podcasts</a>
+          <a href="#goToForm" class="bottom-line__link">Woman TV</a>
+        </nav>
+      </div>
+      <div class="bottom-line__right">
+        <a href="#goToForm" class="bottom-line__login"><img src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg%3E%3Cpath d='M50,0C22.4,0,0,22.4,0,50s22.4,50,50,50s50-22.4,50-50S77.6,0,50,0z M50,94C25.7,94,6,74.3,6,50S25.7,6,50,6 s44,19.7,44,44S74.3,94,50,94z'/%3E%3Cpath d='M45.2,43.8c1.6,0.7,3.4,1,5.3,1s3.6-0.4,5.3-1c5.2-2.1,8.8-7.1,8.8-12.9c0-7.7-6.3-13.9-14.1-13.9 s-14.1,6.2-14.1,13.9C36.4,36.7,40.1,41.7,45.2,43.8z M50.5,23c4.5,0,8.1,3.6,8.1,7.9c0,4.3-3.5,7.9-8.1,7.9s-8.1-3.6-8.1-7.9 C42.4,26.6,46,23,50.5,23z'/%3E%3Cpath d='M56,50c-1.8-0.5-3.6-0.8-5.5-0.8S46.8,49.5,45,50c-8.5,2.5-15.2,10.9-16.9,21.5c-0.5,3,1.6,5.5,4.1,5.5h36.6 c2.5,0,4.6-2.5,4.1-5.5C71.2,60.9,64.5,52.6,56,50z M34.3,71c2.2-9.8,9.3-15.8,16.2-15.8c7,0,14,5.9,16.2,15.8H34.3z'/%3E%3C/g%3E%3C/svg%3E" alt=""></a>
+        <a href="#goToForm" class="bottom-line__toggle">
+          <span></span><span></span><span></span>
+        </a>
+      </div>
+    </div>
+  </header>
+
 <article class="brandable themed theme-7">
 <article class="show-main">
 <div class="background th-bg-head th-color-text th-border-tile-base">
