@@ -1088,10 +1088,39 @@ pagespeed.localStorageCacheInit();</script><link href="images/xfav.png%2Cqv1.pag
   for (let elm of elements) {
       observer.observe(elm);
   }
+
+    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        // Определяем элемент к которому нужно отскроллить
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Ппроверка на существование элемента
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top - 120
+          }, 1000, function() {
+            // Смена фокуса после анимации для правильной навигации с клавиатуры
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Проверка если уже сфокусирован
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Добавляем tabindex для нефокусируемых элементов
+              $target.focus();
+            };
+          });
+          return false;
+        }
+      }
+    });
 </script>
 <script>let flag=0;$('.prewin').on('click',function(){if(flag===0){flag=1;if($(this).hasClass('red')){$(this).next().children().addClass('grats');$(this).siblings(".win").find(".sl_b.sl100").show();$(".prewin.blue").next(".win").find(".sl_b.sl50").show();$(".prewin.yellow").next(".win").find(".sl_b.sl25").show();}if($(this).hasClass('blue')){$(this).next().children().addClass('grats');$(this).siblings(".win").find(".sl_b.sl100").show();$(".prewin.red").next(".win").find(".sl_b.sl50").show();$(".prewin.yellow").next(".win").find(".sl_b.sl25").show();}if($(this).hasClass('yellow')){$(this).next().children().addClass('grats');$(this).siblings(".win").find(".sl_b.sl100").show();$(".prewin.red").next(".win").find(".sl_b.sl50").show();$(".prewin.blue").next(".win").find(".sl_b.sl25").show();}$(this).next().fadeIn(300);setTimeout(()=>{$('.win').show(300);},2000);setTimeout(()=>{$(".spin-result-wrapper").fadeIn();},4000);setTimeout(()=>{$(".matreshka__wrapper").fadeOut();$(".order_block").fadeIn();startConfetti();var destination=$('#form-block').offset().top;$('html, body').animate({scrollTop:destination},1100);start_timer();},5000);var intr,time=600;function start_timer(){intr=setInterval(tick,1e3)}function tick(){if(0<time){time-=1;var e=Math.floor(time/60),t=10<=(t=time-60*e)?t:"0"+t;if(e<0&&(e=0),$("#min").html("0"+e),$("#sec").html(t),0==e&&0==t)return clearInterval(intr),!1}}}})
 function randomInteger(min,max){let rand=min+Math.random()*(max-min);return Math.round(rand);}randomInteger(1,2)</script>
-<script>$(document).ready(function(){$("a").click(function(e){e.preventDefault();if($(".order_block").is(":visible")){$("html,body").animate({scrollTop:$(".x_order_form").offset().top-($(window).height()-$(".x_order_form").outerHeight(true))},1e3)}else{var destination=$('#scroll-point').offset().top;$('html, body').animate({scrollTop:destination},1100);}});})</script>
 <script src="js/confetti.js%2Cqv6.pagespeed.jm.hfDoukTWR0.js"></script>
 <button onclick="startConfetti();" class="btn btn-danger">Start</button>
 <script>if(!window.jQuery){document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"><\/script>');}</script>
