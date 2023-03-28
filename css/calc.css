@@ -1,0 +1,249 @@
+.zamer__panel {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.zamer__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width:767px) {
+    .zamer {
+        padding: 15px
+    }
+
+    .zamer .h2-block {
+        margin: 20px auto 0;
+        width: 100%;
+        max-width: 370px
+    }
+
+    .zamer__title {
+        line-height: normal !important
+    }
+}
+@media screen and (max-width:411px) {
+    .zamer .h2-block {
+        max-width: 100%
+    }
+}
+.zamer {
+    background: #55a9cd;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .75);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .75);
+    margin: 15px;
+    padding: 15px 0
+}
+
+.zamer .h2-block {
+    max-width: 550px;
+    color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid;
+    margin: 10px
+}
+
+.line1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #b60505;
+    font-weight: 900;
+    text-transform: uppercase
+}
+
+.line2 {
+    font-size: 20px;
+    color: #faff00
+}
+
+.green {
+    color: #54ca2e;
+    font-weight: 900;
+    text-transform: uppercase
+}
+
+.zamer .zamer__form {
+    max-width: 369px;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 11.68px 4.32px rgba(0, 0, 1, .05);
+    box-shadow: 0 0 11.68px 4.32px rgba(0, 0, 1, .05);
+    padding: 28px 33px 34px;
+    text-align: center;
+    margin: 20px;
+    max-height: 350px
+}
+
+.zamer .zamer__form h3 {
+    font-size: 26px;
+    font-family: pnb;
+    color: #003955;
+    text-transform: uppercase;
+    margin-bottom: 2px
+}
+
+.zamer .zamer__form span {
+    font-size: 21px;
+    font-family: pnb;
+    color: #003955;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+    display: block
+}
+
+.zamer .zamer__form h4 {
+    font-family: pnb;
+    display: block;
+    background: url(../images/akcii2.png) no-repeat center center;
+    font-size: 17px;
+    font-family: pnb;
+    text-transform: uppercase;
+    color: #fff;
+    width: 256px;
+    height: 37px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 21px
+}
+
+.zamer .zamer__form form button {
+    width: 306px;
+    height: 53px;
+    background: -o-linear-gradient(bottom, #f6d30c 0, #ffe937 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f6d30c), to(#ffe937));
+    background: linear-gradient(360deg, #f6d30c 0, #ffe937 100%);
+    border-radius: 6px;
+    border: none;
+    -webkit-box-shadow: 0 4px 0 0 #e7ae01;
+    box-shadow: 0 4px 0 0 #e7ae01;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: pnb;
+    width: 100%
+}
+
+.zamer .zamer__form form button:hover {
+    background: -o-linear-gradient(top, #f6d30c 0, #ffe937 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f6d30c), to(#ffe937));
+    background: linear-gradient(180deg, #f6d30c 0, #ffe937 100%)
+}
+
+.zamer .zamer__form form input {
+    border-width: 1px;
+    border-color: #ccc;
+    border-style: solid;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 100%;
+    height: 47px;
+    padding: 0 16px;
+    margin-bottom: 12px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+.zamer .zamer__form form select {
+    border-width: 1px;
+    border-color: #ccc;
+    border-style: solid;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 100%;
+    height: 47px;
+    padding: 0 16px;
+    margin-bottom: 12px
+}
+
+.d-flex {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex
+}
+
+@media(max-width:991px) {
+    .d-flex {
+        display: -ms-flexbox !important;
+        display: block;
+        margin: 0 auto;
+        width: 100%
+    }
+
+    .zamer .zamer__form {
+        margin: 0 auto;
+        margin-bottom: 50px
+    }
+
+    .zamer .h2-block {
+        margin: 0 auto
+    }
+}
+
+@media(max-width:630px) {
+    .line1 {
+        font-size: 20px
+    }
+
+    .line2 {
+        font-size: 16px
+    }
+
+    .zamer .zamer__form {
+        margin: 20px auto;
+    }
+
+    .zamer .zamer__form {
+        padding: 1px 10px
+    }
+
+    .zamer .zamer__form p {
+        margin: 3px
+    }
+
+    .zamer .zamer__form form input {
+        margin-bottom: 5px;
+        font-size: 14px
+    }
+
+    .zamer .zamer__form form select {
+        margin-bottom: 5px;
+        font-size: 14px
+    }
+}
+
+@media(max-width:600px) {
+    .ord_button:hover {
+        background-color: #772133;
+        -webkit-box-shadow: 2px 3px 3px #999;
+        box-shadow: 2px 3px 3px #999;
+        text-decoration: none !important;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
